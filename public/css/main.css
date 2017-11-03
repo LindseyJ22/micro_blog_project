@@ -1,0 +1,35 @@
+#sign_in_link{
+	  position: relative;
+    left: 660px;
+
+}
+
+#sign_up_form_container{
+		height: 400px;
+    width: 500px;
+    margin-left: auto;
+    margin-top: 50px;
+    margin-right: auto;
+}
+
+#form_background_container{
+	background-image: url("/images/meteor.gif");
+	height :700px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 1300px;
+  border: 5px solid slategray;
+  margin-left: auto; 
+  margin-right: auto;
+  margin-top: 30px;
+}
+
+.form_label{
+	color: white;
+  font-size: larger;
+	font-weight: bolder;
+}
+
+#email_help_text{
+	color: white;
+}
