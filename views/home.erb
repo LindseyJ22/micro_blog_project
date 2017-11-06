@@ -4,17 +4,13 @@
 	</div>
 	<div id="post_container">
 		<% @users.each do |user| %>
-			<div class="user">
 				<% user.posts.each do |post| %>
-				<!-- <div class="post"> -->
-				<div id="user_section">
-					<%= user.name %> 
-					<p><%= post.created_at %></p>
-				</div>
-				<p><%= post.title %></p>
-				<p><%= post.content %></p>
-				<!-- </div> -->
-			</div>
+					<div class="user">
+						<%= user.name %> 
+						<p><%= post.created_at %></p>
+						<p><%= post.title %></p>
+						<p><%= post.content %></p>
+					</div>
 			<% end %>
 		<% end %>
 	</div>
