@@ -15,6 +15,9 @@ ActiveRecord::Schema.define(version: 20171103200441) do
   create_table "posts", force: :cascade do |t|
     t.integer "user_id"
     t.string "content", limit: 150
+    t.string "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 

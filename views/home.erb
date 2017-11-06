@@ -1,0 +1,18 @@
+<body id="home_body">
+	<div id="blog_logo">
+		<img id="blog_image" src="/images/my_blog_logo.png" alt="">
+	</div>
+	<div id="post_container">
+		<% @users.each do |user| %>
+			<div class="user">
+				<% user.posts.each do |post| %>
+				<!-- <div class="post"> -->
+				<h4><%= post.title %></h4>
+				<%= user.name %> <!-- we can use user because it's what looping through the each loop -->
+				<p><%= post.content %></p>
+				<!-- </div> -->
+			</div>
+			<% end %>
+		<% end %>
+	</div>
+</body>

@@ -1,3 +1,7 @@
+#home_body{
+	background: black;
+}
+
 #sign_in_link{
 	  position: relative;
     left: 660px;
@@ -32,4 +36,44 @@
 
 #email_help_text{
 	color: white;
+}
+
+#blog_logo{
+	text-align: center;
+}
+
+#blog_image{
+	height: 150px;
+}
+
+.user{
+	background: black;
+	height: 100px;
+  width: 900px;
+  margin-bottom: 30px;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	font-family: fantasy;
+	font-weight: bolder;
+	color: white;
+}
+
+/*.post{
+	background: aliceblue;
+	height: 200px;
+	width: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+*/
+#post_container{
+	  background: rgb(54,58,64);
+    height: 500px;
+    width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: scroll;
+    padding: 25px;
 }
