@@ -59,6 +59,14 @@
 	color: white;
 }
 
+#user_section{
+	width: 182px;
+  position: absolute;
+  left: 157px;
+  background: black;
+  height: 100px;
+}
+
 /*.post{
 	background: aliceblue;
 	height: 200px;

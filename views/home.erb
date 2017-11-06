@@ -7,8 +7,11 @@
 			<div class="user">
 				<% user.posts.each do |post| %>
 				<!-- <div class="post"> -->
-				<h4><%= post.title %></h4>
-				<%= user.name %> <!-- we can use user because it's what looping through the each loop -->
+				<div id="user_section">
+					<%= user.name %> 
+					<p><%= post.created_at %></p>
+				</div>
+				<p><%= post.title %></p>
 				<p><%= post.content %></p>
 				<!-- </div> -->
 			</div>
