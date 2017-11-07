@@ -1,8 +1,12 @@
-#sign_in_link{
+#home_body{
+	background: black;
+}
+
+/*#sign_in_link{
 	  position: relative;
     left: 660px;
 
-}
+}*/
 
 #sign_up_form_container{
 		height: 400px;
@@ -32,4 +36,75 @@
 
 #email_help_text{
 	color: white;
+}
+
+#blog_logo{
+	text-align: center;
+}
+
+#blog_image{
+	height: 150px;
+}
+
+.user{
+	background: black;
+	height: 200px;
+  width: 900px;
+  margin-bottom: 30px;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	font-family: fantasy;
+	font-weight: bolder;
+	color: white;
+}
+
+#user_section{
+	width: 182px;
+  position: absolute;
+  left: 157px;
+  background: black;
+  height: 100px;
+}
+
+#user_info{
+	margin-top: 10px;
+  background: rgb(54,58,64);
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  text-align: center;
+}
+
+.new_post_container{
+	text-align: center;
+}
+
+#users_container{
+  background: black;
+  width: 400px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+/*.post{
+	background: aliceblue;
+	height: 200px;
+	width: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+*/
+#post_container{
+	  background: rgb(54,58,64);
+    height: 500px;
+    width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: scroll;
+    padding: 25px;
 }

@@ -1,0 +1,31 @@
+<div id="user_info">
+	<h4>Welcome <%= @user.full_name %></h4>
+	<p><%= @user.email %></p>
+	<p>User Name: <%= @user.name %></p>
+</div>
+<div class="new_post_container">
+	<form action="/new_post" method="POST">
+		<div id="post_title_container">
+			<p>what is the title of your post?</p>
+			<input type="text" class="post-title" placeholder="title" name="post[title]">
+		</div>
+		<div id="post_content_container">
+			<p>what do you want to say?</p>
+			<textarea name="post[content]" id="new-post" ></textarea>
+			<button type="submit" class="btn btn-primary">Post</button>
+		</div>
+	</form>
+</div>
+<div id="post_container">
+			<% @user.posts.each do |post| %>
+				<div class="user">
+					<p>
+						<%= post.user.name %> 
+						<%= post.created_at %>
+					</p>
+					<p><%= post.title %></p>
+					<p><%= post.content %></p>
+				</div>
+			<% end %>
+</div>
+

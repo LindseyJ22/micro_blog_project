@@ -1,0 +1,15 @@
+<body id="home_body">
+	<div id="blog_logo">
+		<img id="blog_image" src="/images/my_blog_logo.png" alt="">
+	</div>
+	<div id="post_container">
+		<% @posts.each do |post| %>
+			<div class="user">
+				<%= post.user.name %> 
+				<p><%= post.created_at.strftime("Posted on %m/%d/%Y") %> <%= post.created_at.strftime("at %I:%M%p") %></p>
+				<p><%= post.title %></p>
+				<p><%= post.content %></p>
+			</div>
+		<% end %>
+	</div>
+</body>

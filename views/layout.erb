@@ -10,9 +10,17 @@
   </head>
   <body>
     <nav class="navbar navbar-dark bg-dark">
-    <a href="/">Home</a>
-    <a href="/sign_up" id="sign_in_link">Sign Up</a>
-    <a href="/log_in">Login</a>
+    <% if user_signed_in? %>
+      <a href="/">Home</a>
+      <a href="/profile">Profile</a>
+      <a href="/log_out">Logout</a>
+      <a href="/find_user">Find User</a>
+      <a href="/users">Browse Users</a>
+      <a href="/delete_account">Delete Account</a>
+    <% else %>
+      <a href="/log_in">Login</a>
+      <a href="/sign_up" id="sign_in_link">Sign Up</a>
+    <% end %>
     </nav>
     <%= yield %>
 

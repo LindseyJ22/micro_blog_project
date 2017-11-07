@@ -1,0 +1,9 @@
+<div id="users_container">
+		<% @users.each do |user| %>
+			<div>
+				<a href="/show/<%= user.id %>">
+				<%= user.name %> 
+				</a>
+			</div>
+		<% end %>
+	</div>
