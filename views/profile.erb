@@ -1,31 +1,58 @@
-<div id="user_info">
-	<h4>Welcome <%= @user.full_name %></h4>
-	<p><%= @user.email %></p>
-	<p>User Name: <%= @user.name %></p>
-</div>
-<div class="new_post_container">
-	<form action="/new_post" method="POST">
-		<div id="post_title_container">
-			<p>what is the title of your post?</p>
-			<input type="text" class="post-title" placeholder="title" name="post[title]">
-		</div>
-		<div id="post_content_container">
-			<p>what do you want to say?</p>
-			<textarea name="post[content]" id="new-post" ></textarea>
-			<button type="submit" class="btn btn-primary">Post</button>
-		</div>
-	</form>
-</div>
-<div id="post_container">
-			<% @user.posts.each do |post| %>
+<body id="profile_body">
+	<div id="user_info">
+		<h4>Welcome, <%= @user.full_name %></h4>
+		<p><%= @user.email %></p>
+		<p>User Name: <%= @user.name %></p>
+		<button id="edit_button">edit profile</button>
+	</div>
+	<div id="edit_background_container">
+    <div id="sign_up_form_container">
+      <form action="/edit_profile" method="POST">
+        <div class="form-group">
+          <input value="<%= @user.email %>" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="user[email]">
+        </div>
+        <div class="form-group">
+          <input value="<%= @user.password %>" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="user[password]">
+        </div>
+        <div class="form-group">
+          <input value="<%= @user.name %>" type="text" class="form-control" id="exampleInputName1" placeholder="User Name" name="user[name]">
+        </div>
+        <div class="form-group">
+          <input value="<%= @user.first_name %>" type="text" class="form-control" id="exampleInputName1" placeholder="First Name" name="user[first_name]">
+        </div>
+         <div class="form-group">
+          <input value="<%= @user.last_name %>" type="text" class="form-control" id="exampleInputName1" placeholder="Last Name" name="user[last_name]">
+        </div>
+        <button id="edit_submit_button" type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+	<div id="post_container">
+		<div class="new_post_container">
+			<form action="/new_post" method="POST">
+				<div class="form-group">
+				  <input maxlength="30" name="post[title]" type="text" class="form-control" id="InputTitle" aria-describedby="titleHelp" placeholder="Enter title">
+				</div>
+				<div class="form-group">
+			    <textarea maxlength="150" name="post[content]" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="How's it going to end?"></textarea>
+			    <button type="submit" class="btn btn-danger">Post</button>
+				</div>
+			</form>
+	</div>
+			<% @user.posts.all.reverse.each do |post| %>
 				<div class="user">
+					<h4 id="title_box">Subject: <%= post.title %>	</h4>
+					<!-- <button id="edit_post_button">Edit Post</button> -->
+					<a id="edit_link" href="/edit_post">Edit</a>
 					<p>
-						<%= post.user.name %> 
-						<%= post.created_at %>
+						<%= post.created_at.strftime("Posted by you on %m/%d/%Y") %> 
+						<%= post.created_at.strftime("at %I:%M%p") %>
 					</p>
-					<p><%= post.title %></p>
-					<p><%= post.content %></p>
+					<p> <%= post.content %> </p>
 				</div>
 			<% end %>
-</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="/javascript/main.js"></script>
+</body>
 

@@ -107,6 +107,10 @@ get '/delete_account' do
 	@user.destroy
 	session[:user_id] = nil
 	redirect '/'
+end
 
+post '/edit_profile' do
+	current_user.update(params[:user])
+	redirect '/profile'
 end
 		

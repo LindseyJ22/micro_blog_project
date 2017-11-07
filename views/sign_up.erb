@@ -1,41 +1,30 @@
-<div id="form_background_container">
-  <div id="sign_up_form_container">
-    <form action="/sign_up" method="POST">
-      <div class="form-group">
-        <label class="form_label" for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="user[email]">
-        <small id="emailHelp" class="form-text text-muted"><p id="email_help_text">We'll never share your email with anyone else.</p></small>
-      </div>
-      <div class="form-group">
-        <label class="form_label" for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="user[password]">
-      </div>
-      <div class="form-group">
-        <label class="form_label" for="exampleInputName1">User Name</label>
-        <input type="text" class="form-control" id="exampleInputName1" placeholder="User Name" name="user[name]">
-      </div>
-      <div class="form-group">
-        <label class="form_label" for="exampleInputName1">First Name</label>
-        <input type="text" class="form-control" id="exampleInputName1" placeholder="First Name" name="user[first_name]">
-      </div>
-       <div class="form-group">
-        <label class="form_label" for="exampleInputName1">Last Name</label>
-        <input type="text" class="form-control" id="exampleInputName1" placeholder="Last Name" name="user[last_name]">
-      </div>
-     <!--  <div class="form-check">
-        <label class="form-check-label">
-          <input type="checkbox" class="form-check-input">
-          Agree to terms
-        </label>
-      </div> -->
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+<body id="sign_up_body">
+  <div id="form_background_container">
+    <div id="sign_up_form_container">
+      <form action="/sign_up" method="POST">
+        <div class="form-group">
+          <label class="form_label" for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="user[email]">
+          <small id="emailHelp" class="form-text text-muted"><p id="email_help_text">We'll never share your email with anyone else.</p></small>
+        </div>
+        <div class="form-group">
+          <label class="form_label" for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="user[password]">
+        </div>
+        <div class="form-group">
+          <label class="form_label" for="exampleInputName1">User Name</label>
+          <input type="text" class="form-control" id="exampleInputName1" placeholder="User Name" name="user[name]">
+        </div>
+        <div class="form-group">
+          <label class="form_label" for="exampleInputName1">First Name</label>
+          <input type="text" class="form-control" id="exampleInputName1" placeholder="First Name" name="user[first_name]">
+        </div>
+         <div class="form-group">
+          <label class="form_label" for="exampleInputName1">Last Name</label>
+          <input type="text" class="form-control" id="exampleInputName1" placeholder="Last Name" name="user[last_name]">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
   </div>
-</div>
-<!-- <form action="/create_account" method="POST">
-  <input type="text" name="user[name]">
-  <input type="email" name="user[email]" placeholder="EMAIL">
-  <input type="password" name="user[password]" placeholder="password">
-  <input type="submit" value="Create Account">
-</form>
-<a href="/find_user">Find User</a> -->
+</body>

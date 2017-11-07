@@ -5,9 +5,8 @@
 	<div id="post_container">
 		<% @posts.each do |post| %>
 			<div class="user">
-				<%= post.user.name %> 
+				<h4><%= post.user.name %> says: <%= post.title %></h4> 
 				<p><%= post.created_at.strftime("Posted on %m/%d/%Y") %> <%= post.created_at.strftime("at %I:%M%p") %></p>
-				<p><%= post.title %></p>
 				<p><%= post.content %></p>
 			</div>
 		<% end %>

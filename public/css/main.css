@@ -1,12 +1,30 @@
 #home_body{
-	background: black;
+	background-image: url("/images/smoke.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
-/*#sign_in_link{
-	  position: relative;
-    left: 660px;
+#profile_body{
+	background-image: url("/images/rose_fire.gif");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 
-}*/
+#show_body{
+	background-image: url("/images/rose_fire.gif");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#sign_up_body{
+	background-image: url("/images/stars_two.gif");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#log_in_body{
+	background: gray;
+}
 
 #sign_up_form_container{
 		height: 400px;
@@ -47,16 +65,19 @@
 }
 
 .user{
-	background: black;
+	background: gray;
 	height: 200px;
-  width: 900px;
+  width: 1000px;
   margin-bottom: 30px;
 	text-align: center;
 	margin-right: auto;
 	margin-left: auto;
-	font-family: fantasy;
+	font-family: fantasy, herculanum;
+	/*font-family: fantasy;*/
 	font-weight: bolder;
-	color: white;
+	color: black;
+	border-radius: 10px;
+	padding: 10px;
 }
 
 #user_section{
@@ -68,17 +89,23 @@
 }
 
 #user_info{
-	margin-top: 10px;
-  background: rgb(54,58,64);
+	margin: 10px auto 10px auto;
   width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-  color: white;
+  margin-right: auto;*/
+  color: black;
   text-align: center;
+  border-radius: 10px;
+  padding: 3px;
+  font-family: fantasy;
+  font-weight: bolder;
+  line-height: 70%;
 }
 
 .new_post_container{
 	text-align: center;
+	width: 500px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 #users_container{
@@ -90,21 +117,52 @@
   margin-top: 20px;
 }
 
-/*.post{
-	background: aliceblue;
-	height: 200px;
-	width: 200px;
+#post_container{
+  background-image: url("/images/atom_bomb.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 800px;
+  width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: scroll;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+#title_box{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#log_in_form{
+  width: 500px;
+  height: 200px;
+  margin: 20px auto 0 auto;
+}
+
+#edit_button{
+	height: 35px;
+}
+
+#edit_background_container{
+	background: gray;
+	height: 500px;
+	width: 700px;
+	padding: 10px;
 	margin-left: auto;
 	margin-right: auto;
-	text-align: center;
+	display: none;
 }
-*/
-#post_container{
-	  background: rgb(54,58,64);
-    height: 500px;
-    width: 1300px;
-    margin-left: auto;
-    margin-right: auto;
-    overflow: scroll;
-    padding: 25px;
+
+#edit_post_button{
+  position: relative;
+  left: 560px;
+}
+
+#edit_link{
+  position: relative;
+  left: 450px;
+  top: -51px;
+  color: red;
 }
