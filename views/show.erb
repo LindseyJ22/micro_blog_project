@@ -1,0 +1,17 @@
+<div id="user_info">
+	<h4><%= @user.full_name %></h4>
+	<p><%= @user.email %></p>
+	<p>User Name: <%= @user.name %></p>
+</div>
+<div id="post_container">
+			<% @user.posts.each do |post| %>
+				<div class="user">
+					<p>
+						<%= post.user.name %> 
+						<%= post.created_at %>
+					</p>
+					<p><%= post.title %></p>
+					<p><%= post.content %></p>
+				</div>
+			<% end %>
+</div>

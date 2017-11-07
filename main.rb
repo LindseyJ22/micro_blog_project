@@ -9,14 +9,19 @@ def current_user
     User.find(session[:user_id])
   end
 end
+	
+def user_signed_in?
+	!session[:user_id].nil?
+end
 
 get '/' do
-	@user = current_user
-	if @user.nil?
+	
+	if !user_signed_in?
 			redirect '/log_in'
 	end
+	@user = current_user
 	@users = User.all
-	@posts = Post.all
+	@posts = Post.last(10).reverse
 	erb :home
 end
 
@@ -71,5 +76,37 @@ end
 get '/logout' do
 	session[:user_id] = nil #logged out
 	redirect '/'
+end
+
+get '/find_user' do
+	erb :find_user
+end
+
+post '/find_user' do
+	# @name = params[:name]
+	if @user = User.where(name: params[:name]) ||
+		 @user = User.where(first_name: params[:first_name])
+		 	redirect '/'
+	else
+		redirect '/find_user'
+	end
+end
+
+get '/users' do
+	@users = User.all
+	erb :users
+end
+
+get '/show/:id' do
+	@user = User.find(params[:id])
+	erb :show
+end
+
+get '/delete_account' do
+	@user = current_user
+	@user.destroy
+	session[:user_id] = nil
+	redirect '/'
+
 end
 		

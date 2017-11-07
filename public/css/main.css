@@ -81,6 +81,15 @@
 	text-align: center;
 }
 
+#users_container{
+  background: black;
+  width: 400px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
 /*.post{
 	background: aliceblue;
 	height: 200px;
