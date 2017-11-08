@@ -1,0 +1,17 @@
+<body id="edit_post_body">
+	<div id="edit_post_container">
+		<div id="edit_post_header">
+			<h1>Destroy Thy Creation!</h1>
+		</div>
+		<form id="edit_post_form" action="/edit_post" method="POST">
+			<div class="form-group">
+			  <input value="<%= @post.title %>" maxlength="30" name="post[title]" type="text" class="form-control" id="InputTitle" aria-describedby="titleHelp" placeholder="Enter title">
+			</div>
+			<div class="form-group">
+			  <textarea maxlength="150" name="post[content]" class="form-control" id="textarea1" rows="3" placeholder="How's it going to end?"><%= @post.content %></textarea>
+			  <button type="submit" class="btn btn-danger">Post</button>
+			</div>
+			<input type="hidden" name="id" value="<%= @post.id %>">
+		</form>
+	</div>
+</body>

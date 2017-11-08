@@ -1,9 +1,13 @@
-<div id="users_container">
-		<% @users.each do |user| %>
-			<div>
-				<a href="/show/<%= user.id %>">
-				<%= user.name %> 
-				</a>
+<body id="users_body">
+	<div id="user_wrapper">
+		<div id="users_container">
+				<% @users.each do |user| %>
+					<div>
+						<a href="/show/<%= user.id %>">
+						<%= user.name %> 
+						</a>
+					</div>
+				<% end %>
 			</div>
-		<% end %>
-	</div>
+		</div>
+<body>
