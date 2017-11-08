@@ -23,7 +23,9 @@
 }
 
 #log_in_body{
-	background: gray;
+	background-image: url("/images/smoke.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 #edit_post_body{
@@ -91,7 +93,6 @@
 	margin-right: auto;
 	margin-left: auto;
 	font-family: fantasy, herculanum;
-	/*font-family: fantasy;*/
 	font-weight: bolder;
 	color: black;
 	border-radius: 10px;
@@ -133,6 +134,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
+  border-radius: 20%
 }
 
 #post_container{
@@ -232,7 +234,7 @@
   background: gray;
   padding: 20px;
   margin: 20px auto 0 auto;
-  border-radius: 10px;
+  border-radius: 50%;
 }
 
 #user_search_container{
@@ -243,6 +245,28 @@
 .search_wrapper{
 	width: 300px;
 	margin: 0 auto 0 auto;
+}
+
+#log_in_container{
+	margin: 20px auto 0 auto;
+  width: 700px;
+  height: 700px;
+  background-image: url("/images/atom_bomb.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+#log_in_text{
+  color: white;
+  font-family: fantasy;
+  font-weight: bolder;
+  text-align: center;
+}
+
+#form_container{
+  position: relative;
+  top: 200px;
 }
 
 #find_user_container{
