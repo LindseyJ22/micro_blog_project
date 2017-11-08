@@ -310,3 +310,7 @@
 .link_text{
 	color: orange;
 }
+
+#music_container{
+	width: 375px;
+}
