@@ -1,11 +1,19 @@
 <body id="log_in_body">
-	<form id="log_in_form" action="/log_in" method="POST">
-	  <div class="form-group">
-	    <input type="email" class="form-control" id="email_login" aria-describedby="emailHelp" placeholder="Enter email" name="user[email]">
-	  </div>
-	  <div class="form-group">
-	    <input type="password" class="form-control" id="login_password" name="user[password]" placeholder="Password">
-	  </div>
-	  <button type="submit" class="btn btn-primary">Submit</button>
-	</form>
+	<div id="blog_logo">
+		<img id="blog_image" src="/images/my_blog_logo.png" alt="">
+	</div>
+	<div id="log_in_container">
+		<div id="form_container">
+			<h4 id="log_in_text">Please log in</h4>
+			<form id="log_in_form" action="/log_in" method="POST">
+			  <div class="form-group">
+			    <input type="email" class="form-control" id="email_login" aria-describedby="emailHelp" placeholder="Enter email" name="user[email]">
+			  </div>
+			  <div class="form-group">
+			    <input type="password" class="form-control" id="login_password" name="user[password]" placeholder="Password">
+			  </div>
+			  <button type="submit" class="btn btn-primary">Submit</button>
+			</form>	
+		</div>
+	</div>
 </body>
