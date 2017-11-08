@@ -41,18 +41,18 @@
 	</div>
 			<% @user.posts.all.reverse.each do |post| %>
 				<div class="user">
-					<h4 id="title_box">Subject: <%= post.title %>	</h4>
+					<h4 id="title_box"><%= post.title %>	</h4>
 					<!-- <button id="edit_post_button">Edit Post</button> -->
-					<a id="edit_link" href="/edit_post">Edit</a>
-					<p>
+					<small>
 						<%= post.created_at.strftime("Posted by you on %m/%d/%Y") %> 
 						<%= post.created_at.strftime("at %I:%M%p") %>
-					</p>
+					</small>
 					<p> <%= post.content %> </p>
-				</div>
+					<a id="edit_link" href="/edit_post/<%= post.id %>">Edit</a>
+					<a id="delete_link" href="/delete_post/<%= post.id %>">Delete</a>
+					</div>
 			<% end %>
 	</div>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="/javascript/main.js"></script>
+	
 </body>
 

@@ -8,6 +8,10 @@
 				<h4><%= post.user.name %> says: <%= post.title %></h4> 
 				<p><%= post.created_at.strftime("Posted on %m/%d/%Y") %> <%= post.created_at.strftime("at %I:%M%p") %></p>
 				<p><%= post.content %></p>
+				<% if post.user.id == @user.id %>
+					<a id="home_edit_link" href="/edit_post/<%= post.id %>">Edit</a>
+					<a id="home_delete_link" href="/delete_post_from_feed/<%= post.id %>">Delete</a>
+				<% end %>
 			</div>
 		<% end %>
 	</div>

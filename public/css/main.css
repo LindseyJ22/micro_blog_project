@@ -26,6 +26,24 @@
 	background: gray;
 }
 
+#edit_post_body{
+	background-image: url("/images/big_red_flames.gif");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#users_body{
+	background-image: url("/images/atom_bomb.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#find_user_body{
+	background-image: url("/images/smoke.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
 #sign_up_form_container{
 		height: 400px;
     width: 500px;
@@ -66,7 +84,7 @@
 
 .user{
 	background: gray;
-	height: 200px;
+	height: 235px;
   width: 1000px;
   margin-bottom: 30px;
 	text-align: center;
@@ -163,6 +181,108 @@
 #edit_link{
   position: relative;
   left: 450px;
-  top: -51px;
-  color: red;
+  top: -122px;
+  color: orange;
+}
+#home_edit_link{
+	position: relative;
+  left: 494px;
+  top: -156px;
+  color: orange;
+}
+
+#delete_link{
+	position: relative;
+	left: 400px;
+	top: 35px;
+	color: orange;
+}
+
+#home_delete_link{
+	position: relative;
+	left: 442px;
+	top: -21px;
+	color: orange;
+}
+
+#edit_post_form{
+	height:500px;
+	width: 800px;
+	margin: 20px auto 0 auto;
+}
+
+#edit_post_header{
+	margin: 20px auto 5px auto;
+	width: 800px;
+	font-family: fantasy;
+	color: white;
+}
+
+#edit_post_container{
+	width: 1000px;
+	background-image: url("/images/big_red_flames.gif");
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: 20px auto 0 auto;
+	padding: 20px;
+}
+
+#user_wrapper{
+  width: 1000px;
+  background: gray;
+  padding: 20px;
+  margin: 20px auto 0 auto;
+  border-radius: 10px;
+}
+
+#user_search_container{
+	width: 300px;
+	margin: 5px auto 0 auto;
+}
+
+.search_wrapper{
+	width: 300px;
+	margin: 0 auto 0 auto;
+}
+
+#find_user_container{
+	margin: 20px auto 0 auto;
+  width: 700px;
+  height: 700px;
+  background-image: url("/images/atom_bomb.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+#user_search{
+	width: 300px;
+	margin-top: 90px;
+}
+
+#log_in_incorrect_container{
+  text-align: center;
+  width: 700px;
+  background: gray;
+  margin: 50px auto 0 auto;
+  padding: 20px;
+  border-radius: 50%;
+  height: 700px;
+  font-family: fantasy;
+  font-weight: bolder;
+}
+
+#incorrect_text{
+	margin-top: 200px;
+	font-weight: bolder;
+}
+
+#log_in_incorrect_body{
+	background-image: url("/images/tire_fire.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.link_text{
+	color: orange;
 }

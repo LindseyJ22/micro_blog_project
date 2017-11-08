@@ -9,7 +9,7 @@ def current_user
     User.find(session[:user_id])
   end
 end
-	
+
 def user_signed_in?
 	!session[:user_id].nil?
 end
@@ -56,7 +56,7 @@ post '/log_in' do
 		session[:user_id] = @user.id #logging them in
 		redirect '/'
 	else
-		redirect '/sign_up'
+		redirect '/log_in_incorrect'
 	end
 
 end
@@ -82,15 +82,10 @@ get '/find_user' do
 	erb :find_user
 end
 
-post '/find_user' do
-	# @name = params[:name]
-	if @user = User.where(name: params[:name]) ||
-		 @user = User.where(first_name: params[:first_name])
-		 	redirect '/'
-	else
-		redirect '/find_user'
-	end
-end
+# post '/find_user' do
+# 		redirect '/find_user'
+# 	end
+# end
 
 get '/users' do
 	@users = User.all
@@ -98,7 +93,7 @@ get '/users' do
 end
 
 get '/show/:id' do
-	@user = User.find(params[:id])
+	@user = User.find(params[:id]) 
 	erb :show
 end
 
@@ -112,5 +107,38 @@ end
 post '/edit_profile' do
 	current_user.update(params[:user])
 	redirect '/profile'
+end
+
+get '/edit_post/:id' do
+	@post = Post.find(params[:id])
+	erb :edit_post
+end
+
+post '/edit_post' do
+	@post = Post.find(params[:id])
+	@post.update(params[:post])
+	redirect '/profile'
+end
+
+post '/search_for_user' do
+	@users = User.where('name LIKE ?', "%#{params[:search_term]}%")
+	@users
+	erb :search_results, layout: false
+end
+
+get '/delete_post/:id' do
+	@post = Post.find(params[:id])
+	@post.destroy
+	redirect '/profile'
+end
+
+get '/delete_post_from_feed/:id' do
+	@post = Post.find(params[:id])
+	@post.destroy
+	redirect '/'
+end
+
+get '/log_in_incorrect' do
+	erb :log_in_incorrect
 end
 		
